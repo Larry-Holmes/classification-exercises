@@ -1,4 +1,3 @@
-#standard ds libraries
 import pandas as pd
 import numpy as np
 
@@ -7,16 +6,16 @@ from sklearn.model_selection import train_test_split
 
 
 def prep_iris(iris):
-    iris = iris.drop(columns='species_id')
+    iris = iris.drop(columns=['species_id','measurement_id'])
     iris = iris.rename(columns={'species_name':'species'})
-    dummy_iris = pd.get_dummies(iris.species)
+    dummy_iris = pd.get_dummies(iris.species, drop_first=True)
     iris = pd.concat([iris, dummy_iris], axis=1)
     return iris
 
 
 def prep_titanic(titanic):
     titanic = titanic.drop(columns=['embarked','class', 'age','deck'])
-    dummy_df = pd.get_dummies(data=titanic[['sex','embark_town']])
+    dummy_df = pd.get_dummies(data=titanic[['sex','embark_town']], drop_first=True)
     titanic = pd.concat([titanic, dummy_df], axis=1)
     
     return titanic
