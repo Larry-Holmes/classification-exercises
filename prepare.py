@@ -17,7 +17,7 @@ def prep_titanic(titanic):
     titanic = titanic.drop(columns=['embarked','class', 'age','deck'])
     dummy_df = pd.get_dummies(data=titanic[['sex','embark_town']], drop_first=True)
     titanic = pd.concat([titanic, dummy_df], axis=1)
-    
+    titanic = titanic.drop(columns=['sex', 'embark_town', 'passenger_id'])
     return titanic
 
 
