@@ -14,7 +14,7 @@ def prep_iris(iris):
 
 
 def prep_titanic(titanic):
-    titanic = titanic.drop(columns=['embarked','class', 'age','deck'])
+    titanic = titanic.drop(columns=['embarked','class','deck'])
     dummy_df = pd.get_dummies(data=titanic[['sex','embark_town']], drop_first=True)
     titanic = pd.concat([titanic, dummy_df], axis=1)
     titanic = titanic.drop(columns=['sex', 'embark_town', 'passenger_id'])
@@ -24,13 +24,15 @@ def prep_titanic(titanic):
 def prep_telco(telco):
     telco = telco.drop(columns=['internet_service_type_id', 'contract_type_id', 'payment_type_id'])
 
-    telco['gender_encoded'] = telco.gender.map({'Female': 1, 'Male': 0})
-    telco['partner_encoded'] = telco.partner.map({'Yes': 1, 'No': 0})
-    telco['dependents_encoded'] = telco.dependents.map({'Yes': 1, 'No': 0})
-    telco['phone_service_encoded'] = telco.phone_service.map({'Yes': 1, 'No': 0})
-    telco['paperless_billing_encoded'] = telco.paperless_billing.map({'Yes': 1, 'No': 0})
-    telco['churn_encoded'] = telco.churn.map({'Yes': 1, 'No': 0})
+    telco['is_female'] = telco.gender.map({'Female': 1, 'Male': 0})
+    telco['has_partner'] = telco.partner.map({'Yes': 1, 'No': 0})
+    telco['has_dependents'] = telco.dependents.map({'Yes': 1, 'No': 0})
+    telco['has_phone_service'] = telco.phone_service.map({'Yes': 1, 'No': 0})
+    telco['has_paperless_billing'] = telco.paperless_billing.map({'Yes': 1, 'No': 0})
+    telco['has_churned'] = telco.churn.map({'Yes': 1, 'No': 0})
     
+    telco = telco.drop(columns = ['gender', 'partner', 'dependents', 'phone_service', 'paperless_billing', 'churn', 'customer_id'])
+
     dummy_df = pd.get_dummies(telco[['multiple_lines', \
                               'online_security', \
                               'online_backup', \
@@ -45,6 +47,15 @@ def prep_telco(telco):
                               drop_first=True)
     telco = pd.concat( [telco, dummy_df], axis=1 )
     
+    telco = telco.drop(columns = ['multiple_lines', 'online_security', 'online_backup', \
+                             'device_protection', 'tech_support', 'streaming_tv', \
+                             'streaming_movies', 'payment_type', 'internet_service_type',\
+                             'contract_type', 'online_security_No internet service', \
+                             'online_backup_No internet service', 'device_protection_No internet service', \
+                             'tech_support_No internet service', 'streaming_tv_No internet service', \
+                             'streaming_movies_No internet service', 'multiple_lines_No phone service'])
+    telco['total_charges'] = telco.total_charges.replace(' ', 0)
+    telco['total_charges'] = telco.total_charges.astype(float)
     return telco
 
 
