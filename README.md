@@ -1,7 +1,7 @@
 # Classification Project Summary
 
 ## Project Objectives
-> - Document code, process, findings, and key takeawys in a Jupyter Notebook Final Report
+> - Document the code, the process, the findings, and the key takeaways in a Jupyter Notebook Final Report
 > - Create modules that make the process repeatable and the report easier to read and follow
 > - Construct a model to predict customer churn using classification techniques, and make predictions for a group of customers
 > - Refine work with a Report, in the form of a jupyter notebook, that will be walked through in a 5 minute presentation to a group of collegues and managers about the work did, why, goals, what was found, methodologies, and conclusions.
@@ -60,6 +60,7 @@
 > 2. Many features help to predict churn with some of the bigger predictors being age (senior_citizen), how much a customer is paying (monthly_charges, total_charges, contract_type, payment_type) and what's affecting how much they pay (internet_service_type), and finally whether customers have adequate support with their plan (tech_support)
 
 > 3. My recommendations are that customers are encouraged to sign up with a one or two year contract by maybe offering technical support included.  We should also focus on a younger crowd who has an established family because they tend to churn at a lesser rate.
+
 ## Project Plan
 
 ### Planning Phase
