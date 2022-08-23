@@ -31,7 +31,7 @@ def prep_telco(telco):
     telco['has_paperless_billing'] = telco.paperless_billing.map({'Yes': 1, 'No': 0})
     telco['has_churned'] = telco.churn.map({'Yes': 1, 'No': 0})
     
-    telco = telco.drop(columns = ['gender', 'partner', 'dependents', 'phone_service', 'paperless_billing', 'churn', 'customer_id'])
+    telco = telco.drop(columns = ['gender', 'partner', 'dependents', 'phone_service', 'paperless_billing', 'churn'])
 
     dummy_df = pd.get_dummies(telco[['multiple_lines', \
                               'online_security', \
