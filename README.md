@@ -64,35 +64,35 @@
 
 ### Planning Phase
 
-> Created a README.md file
-> Imported all of my tools and files needed to properly conduct the project
+> - Created a README.md file
+> - Imported all of my tools and files needed to properly conduct the project
 
 ### Acquire Phase
 
-> Utilized my acquire file to pull telco data from a Codeup database
+> - Utilized my acquire file to pull telco data from a Codeup database
 
 ### Prepare Phase
 
-> Utilized my prepare file to clean up my telco dataset
-> Split the overall dataset into my train, validate, and test datasets
-> Utilized my explore file to create a list of numerical datatype features and a list of categorical datatype features for future exploration
+> - Utilized my prepare file to clean up my telco dataset
+> - Split the overall dataset into my train, validate, and test datasets
+> - Utilized my explore file to create a list of numerical datatype features and a list of categorical datatype features for future exploration
 
 ### Explore Phase
 
-> Created a for loop that used my explore file to create a visualization for every categorical feature.  The explore file also allowed for hypothesis testing each feature to ensure a relationship between the feature and the target (churn).
-> Asked further questions about that data such as how monthly charges effects churn rate and the relationship between other features and monthly charges.  Also explored how age played a part in churn rate and if any other feature could assist in predicting churn for older customers.
+> - Created a for loop that used my explore file to create a visualization for every categorical feature.  The explore file also allowed for hypothesis testing each feature to ensure a relationship between the feature and the target (churn).
+> - Asked further questions about that data such as how monthly charges effects churn rate and the relationship between other features and monthly charges.  Also explored how age played a part in churn rate and if any other feature could assist in predicting churn for older customers.
 
 ### Model Phase
 
-> Set up the baseline accuracy for future models to base their success on
-> Trained multiple models for each type of classification technique (Decision Tree, Logistic Regression, Random Forest, KNN)
-> Validated all models to narrow down my selection to the best performing model.
-> Chose the MVP of all created models and used the test data set to ensure the best model worke entirely to expectations
+> - Set up the baseline accuracy for future models to base their success on
+> - Trained multiple models for each type of classification technique (Decision Tree, Logistic Regression, Random Forest, KNN)
+> - Validated all models to narrow down my selection to the best performing model.
+> - Chose the MVP of all created models and used the test data set to ensure the best model worke entirely to expectations
 
 ### Deliver Phase
 
-> Prepped my final notebook with a clean presentation to best present my findings and process to other Data Scientists and stakeholders alike.
-> Ensured that a prediction csv was generated for future proof of my working model
+> - Prepped my final notebook with a clean presentation to best present my findings and process to other Data Scientists and stakeholders alike.
+> - Ensured that a prediction csv was generated for future proof of my working model
 
 ## How To Reproduce My Project
 
