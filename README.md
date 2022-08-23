@@ -56,5 +56,20 @@
 ## Executive Summary - Key Findings and Recommendations
 
 ## Project Plan
-
+### Planning Phase
+>
+### Acquire Phase
+>
+### Prepare Phase
+>
+### Explore Phase
+>
+### Model Phase
+>
+### Deliver Phase
+>
 ## How To Reproduce My Project
+> 1. Read this README.md
+> 2. Download the acquire.py, prepare.py, explore.py and final_report.ipynb files into your directory along with your own env file that contains your user, password, and host variables
+> 3. Run my final_report.ipynb notebook
+> 4. Congratulations! You can predict future churn at Telco!
